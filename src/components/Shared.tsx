@@ -1,6 +1,7 @@
 import { useState } from 'react';
 import type { FormEvent, ReactNode } from 'react';
 import { Link } from 'react-router';
+import { sendContact } from '../api';
 import { ArrowRight, CheckCircle2, Clock, Mail, MapPin, Menu, MessageCircle, Phone, X } from 'lucide-react';
 
 type Theme = 'premium' | 'studio';
@@ -124,9 +125,26 @@ export function Footer({ theme }: { theme: Theme }) {
 export function ContactForm({ theme }: { theme: Theme }) {
   const [sent, setSent] = useState(false);
   const playful = theme === 'studio';
-  const onSubmit = (e: FormEvent) => {
+  const [error, setError] = useState('');
+  const onSubmit = async (e: FormEvent<HTMLFormElement>) => {
     e.preventDefault();
-    setSent(true);
+    const formEl = e.currentTarget;
+    const f = new FormData(formEl);
+    setError('');
+    try {
+      await sendContact({
+        source: `contact-${theme}`,
+        nom: String(f.get('nom')),
+        email: String(f.get('email')),
+        telephone: String(f.get('tel') || '') || undefined,
+        besoin: String(f.get('besoin')),
+        message: String(f.get('message')),
+      });
+      formEl.reset();
+      setSent(true);
+    } catch {
+      setError('Une erreur est survenue, réessayez ou contactez-nous sur WhatsApp.');
+    }
   };
   const form = (
     <form className={`contact-form${playful ? ' contact-form-playful' : ''}`} onSubmit={onSubmit}>
@@ -145,10 +163,10 @@ export function ContactForm({ theme }: { theme: Theme }) {
         <label className="form-full">Message <span>*</span><textarea name="message" placeholder="Décrivez votre projet" required /></label>
       </div>
       <div className="form-bottom">
-        <p><span>*</span> Démonstration : aucun message n’est envoyé.</p>
         <button type="submit" className={`button ${playful ? 'button-coral' : 'button-gold'}`}>Envoyer <ArrowRight size={15} /></button>
       </div>
-      {sent && <p className="form-status"><CheckCircle2 size={15} /> Merci ! Ceci est une démonstration, aucun message n’a été envoyé.</p>}
+      {sent && <p className="form-status"><CheckCircle2 size={15} /> Merci ! Votre message a bien été envoyé, nous revenons vers vous sous 24h.</p>}
+      {error && <p className="form-status" role="alert">{error}</p>}
     </form>
   );
   return playful ? (
