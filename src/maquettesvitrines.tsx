@@ -1,6 +1,7 @@
 import { useState } from "react";
 import type { ChangeEvent, FormEvent } from "react";
 import { sendContact } from "./api";
+import { Honeypot } from "./components/Shared";
 import {
   ArrowUpRight,
   ArrowRight,
@@ -112,6 +113,7 @@ const DossierModal = ({
         </div>
 
         <form onSubmit={handleSubmit} className="space-y-5">
+          <Honeypot />
           <div className="grid grid-cols-1 sm:grid-cols-2 gap-4">
             <div>
               <label className="block text-xs font-mono uppercase tracking-wider mb-1.5 opacity-70">
@@ -862,6 +864,7 @@ const CabinetEditorial = ({
               </div>
             ) : (
               <form onSubmit={handleQuickContact} className="space-y-4">
+                <Honeypot />
                 <div className="font-mono text-xs uppercase tracking-wider text-neutral-500 pb-2 border-b border-[#DCD6C8]">
                   Formulaire de prise de contact préalable
                 </div>

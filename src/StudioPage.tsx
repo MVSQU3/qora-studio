@@ -15,7 +15,6 @@ import {
   MessageCircle,
   Palette,
   Plus,
-  Quote,
   Rocket,
   Sparkles,
   Zap,
@@ -57,7 +56,7 @@ const projects = [
   {
     tag: "SITE VITRINE",
     name: "Maison Naya",
-    sector: "Concept fictif · décoration & maison",
+    sector: "Concept · décoration & maison",
     image:
       "https://images.unsplash.com/photo-1497366811353-6870744d04b2?auto=format&fit=crop&w=1000&q=82",
     cls: "project-olive",
@@ -65,7 +64,7 @@ const projects = [
   {
     tag: "IDENTITÉ VISUELLE",
     name: "Kawa Café",
-    sector: "Concept fictif · café de spécialité",
+    sector: "Concept · café de spécialité",
     image:
       "https://images.unsplash.com/photo-1558655146-d09347e92766?auto=format&fit=crop&w=1000&q=82",
     cls: "project-terracotta",
@@ -73,7 +72,7 @@ const projects = [
   {
     tag: "EXPÉRIENCE DIGITALE",
     name: "Nexa Conseil",
-    sector: "Concept fictif · conseil aux PME",
+    sector: "Concept · conseil aux PME",
     image:
       "https://images.unsplash.com/photo-1460925895917-afdab827c52f?auto=format&fit=crop&w=1000&q=82",
     cls: "project-blue",
@@ -86,7 +85,7 @@ const faqs = [
   },
   {
     q: "Combien coûte un site vitrine ?",
-    a: "Le budget dépend du nombre de pages, du contenu disponible et des fonctionnalités. Les montants affichés ici sont des repères de démonstration : un devis précis sera établi après cadrage.",
+    a: "Le budget dépend du nombre de pages, du contenu disponible et des fonctionnalités. Les montants affichés ici sont indicatifs : un devis précis sera établi après cadrage.",
   },
   {
     q: "Combien de temps faut-il pour lancer un site ?",
@@ -265,10 +264,7 @@ export default function StudioPage() {
             </p>
             <div className="offers-note">
               <CircleHelp size={17} />
-              <span>
-                Tarifs de démonstration : à confirmer selon l’offre commerciale
-                réelle.
-              </span>
+              <span>Tarifs indicatifs : devis personnalisé après échange.</span>
             </div>
           </div>
           <div className="offer-pricing-grid grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-4">
@@ -356,7 +352,7 @@ export default function StudioPage() {
               </h2>
             </div>
             <div className="work-top-right">
-              <DemoLabel>PROJETS FICTIFS</DemoLabel>
+              <DemoLabel>PISTES CRÉATIVES</DemoLabel>
               <p>
                 Ces visuels illustrent une direction créative. Ils ne
                 correspondent pas à des clients ou réalisations réelles.
@@ -372,7 +368,7 @@ export default function StudioPage() {
                 <div className="project-image">
                   <img
                     src={project.image}
-                    alt={`Image d'inspiration pour le concept fictif ${project.name}`}
+                    alt={`Image d'inspiration pour le concept ${project.name}`}
                     loading="lazy"
                     decoding="async"
                   />
@@ -476,56 +472,6 @@ export default function StudioPage() {
           </div>
         </section>
 
-        <section className="studio-testimonials section-pad">
-          <div className="studio-testimonial-heading">
-            <Eyebrow playful>LES MOTS COMPTENT</Eyebrow>
-            <h2>
-              Une collaboration qui
-              <br />
-              <em>fait avancer.</em>
-            </h2>
-            <DemoLabel>AVIS DE DÉMONSTRATION</DemoLabel>
-          </div>
-          <div className="studio-testimonial-cards grid grid-cols-1 sm:grid-cols-2 gap-4">
-            <article>
-              <div className="testimonial-stars">★★★★★</div>
-              <Quote size={23} />
-              <p>
-                « Enfin un site qui explique clairement ce que nous faisons,
-                sans en faire trop. Le parcours est beaucoup plus facile à
-                comprendre. »
-              </p>
-              <div className="studio-author">
-                <span>F</span>
-                <div>
-                  <strong>Fatou B.</strong>
-                  <small>Profil fictif · Commerce</small>
-                </div>
-              </div>
-            </article>
-            <article>
-              <div className="testimonial-stars">★★★★★</div>
-              <Quote size={23} />
-              <p>
-                « Les échanges ont été simples et les propositions très
-                concrètes. Nous avons avancé étape par étape, sans perdre de vue
-                notre objectif. »
-              </p>
-              <div className="studio-author">
-                <span>Y</span>
-                <div>
-                  <strong>Yao Q.</strong>
-                  <small>Profil fictif · Services B2B</small>
-                </div>
-              </div>
-            </article>
-          </div>
-          <p className="testimonial-disclaimer">
-            Noms, citations et notes fictifs. À remplacer par des retours
-            authentiques avec accord des clients.
-          </p>
-        </section>
-
         <section className="studio-faq section-pad" id="faq">
           <div className="faq-intro">
             <Eyebrow playful>QUESTIONS FRÉQUENTES</Eyebrow>
@@ -609,12 +555,9 @@ export default function StudioPage() {
               </div>
               <div className="studio-contact-meta">
                 <span>
-                  <Clock size={16} /> Réponse sous 1 à 2 jours ouvrés*
+                  <Clock size={16} /> Réponse sous 1 à 2 jours ouvrés
                 </span>
                 <span>Abidjan, Côte d’Ivoire</span>
-                <small>
-                  * Engagement indicatif de démonstration à confirmer.
-                </small>
               </div>
             </div>
             <div className="studio-form-card">

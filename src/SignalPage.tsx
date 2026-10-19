@@ -57,14 +57,14 @@ const concepts = [
     label: "SAAS",
     name: "Naya Analytics",
     img: "https://images.unsplash.com/photo-1551288049-bebda4e38f71?auto=format&fit=crop&w=1200&q=84",
-    note: "Concept fictif : tableau de bord et suivi des indicateurs clés.",
+    note: "Concept : tableau de bord et suivi des indicateurs clés.",
   },
   {
     id: "02",
     label: "PLATEFORME WEB",
     name: "Kalo Platform",
     img: "https://images.unsplash.com/photo-1555066931-4365d14bab8c?auto=format&fit=crop&w=1200&q=84",
-    note: "Concept fictif : application web sur mesure et espace client.",
+    note: "Concept : application web sur mesure et espace client.",
   },
 ];
 
@@ -259,10 +259,10 @@ export default function SignalPage() {
               <h2>
                 Idées en
                 <br />
-                <em>mode prototype.</em>
+                <em>exploration.</em>
               </h2>
               <div>
-                <DemoLabel>CONCEPTS FICTIFS</DemoLabel>
+                <DemoLabel>PISTES CRÉATIVES</DemoLabel>
                 <p>
                   Ces images illustrent des pistes créatives et ne représentent
                   pas des projets clients livrés.
@@ -278,7 +278,7 @@ export default function SignalPage() {
                   <div className="sv2-concept-image">
                     <img
                       src={project.img}
-                      alt={`Visuel d’inspiration pour le concept fictif ${project.name}`}
+                      alt={`Visuel d’inspiration pour le concept ${project.name}`}
                       loading="lazy"
                       decoding="async"
                     />

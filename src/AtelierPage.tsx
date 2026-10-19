@@ -54,7 +54,7 @@ const projects = [
     num: "03",
     name: "Terre & Feuille",
     sector: "BIEN-ÊTRE",
-    note: "Un univers calme pour une marque de soins fictive.",
+    note: "Un univers calme pour une marque de soins.",
     image:
       "https://images.unsplash.com/photo-1540555700478-4be289fbecef?auto=format&fit=crop&w=1100&q=84",
   },
@@ -266,7 +266,7 @@ export default function AtelierPage() {
               </h2>
             </div>
             <div className="ed-project-note">
-              <DemoLabel>CONCEPTS FICTIFS</DemoLabel>
+              <DemoLabel>PISTES CRÉATIVES</DemoLabel>
               <p>
                 Des directions artistiques exploratoires — pas des références
                 client réelles.
@@ -293,7 +293,7 @@ export default function AtelierPage() {
                 <div className="ed-project-image">
                   <img
                     src={project.image}
-                    alt={`Visuel d’inspiration du concept fictif ${project.name}`}
+                    alt={`Visuel d’inspiration du concept ${project.name}`}
                     loading="lazy"
                     decoding="async"
                   />
@@ -384,10 +384,6 @@ export default function AtelierPage() {
         </a>
         <p>Fait avec intention à Abidjan.</p>
         <a href="#top">Retour au début ↑</a>
-        <small>
-          Identité fictive — remplacer les éléments de démonstration avant
-          publication.
-        </small>
       </footer>
       <FloatingWhatsApp />
     </div>

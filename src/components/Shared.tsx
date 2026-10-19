@@ -29,7 +29,7 @@ export function Eyebrow({ children, light, playful }: { children: ReactNode; lig
   );
 }
 
-export function DemoLabel({ children = 'AVIS DE DÉMONSTRATION' }: { children?: ReactNode }) {
+export function DemoLabel({ children = 'PISTES CRÉATIVES' }: { children?: ReactNode }) {
   return <span className="demo-label"><span />{children}</span>;
 }
 
@@ -115,10 +115,23 @@ export function Footer({ theme }: { theme: Theme }) {
       </div>
       <div className="footer-bottom">
         <span>© 2026 Qora Studio</span>
-        <span>Prototype de présentation — identité fictive.</span>
         <a href="#top">Retour en haut ↑</a>
       </div>
     </footer>
+  );
+}
+
+/** Champ piège invisible : les humains ne le voient pas, les bots le remplissent. */
+export function Honeypot() {
+  return (
+    <input
+      name="website"
+      type="text"
+      tabIndex={-1}
+      autoComplete="off"
+      aria-hidden="true"
+      style={{ position: 'absolute', left: '-9999px', width: 1, height: 1, opacity: 0 }}
+    />
   );
 }
 
@@ -148,6 +161,7 @@ export function ContactForm({ theme }: { theme: Theme }) {
   };
   const form = (
     <form className={`contact-form${playful ? ' contact-form-playful' : ''}`} onSubmit={onSubmit}>
+      <Honeypot />
       <div className="form-grid grid grid-cols-2 gap-4">
         <label>Nom <span>*</span><input name="nom" placeholder="Votre nom" required /></label>
         <label>E-mail <span>*</span><input name="email" type="email" placeholder="vous@exemple.com" required /></label>

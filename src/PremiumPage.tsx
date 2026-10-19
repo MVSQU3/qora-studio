@@ -12,13 +12,11 @@ import {
   Layers3,
   LockKeyhole,
   PenTool,
-  Quote,
   ShieldCheck,
   TrendingUp,
 } from "lucide-react";
 import {
   ContactForm,
-  DemoLabel,
   Eyebrow,
   Footer,
   Header,
@@ -309,10 +307,6 @@ export default function PremiumPage() {
               <br />
               <em>à chaque étape.</em>
             </h2>
-            <p>
-              Les chiffres ci-dessous sont des repères de démonstration, à
-              remplacer par les données réelles de l’entreprise.
-            </p>
           </div>
           <div className="numbers-grid">
             <div>
@@ -356,53 +350,6 @@ export default function PremiumPage() {
           </div>
         </section>
 
-        <section className="premium-testimonials section-pad">
-          <div className="testimonial-head">
-            <SectionHeading
-              kicker="ILS NOUS FONT CONFIANCE"
-              title={
-                <>
-                  Une collaboration
-                  <br />
-                  <em>qui a du sens.</em>
-                </>
-              }
-              description="Exemples de présentation uniquement. Les avis réels devront être recueillis et validés avant toute publication."
-            />
-            <DemoLabel>AVIS DE DÉMONSTRATION</DemoLabel>
-          </div>
-          <div className="testimonial-grid grid grid-cols-1 md:grid-cols-2 gap-5">
-            <article>
-              <Quote size={23} />
-              <p>
-                « L’équipe a su rendre notre offre plus lisible et poser les
-                bonnes questions avant de passer au design. »
-              </p>
-              <div className="testimonial-author">
-                <span>AK</span>
-                <div>
-                  <strong>Aminata Q.</strong>
-                  <small>Profil fictif · PME de services</small>
-                </div>
-              </div>
-            </article>
-            <article>
-              <Quote size={23} />
-              <p>
-                « Nous avions besoin d’un cadre clair. Les étapes et les points
-                de validation nous ont permis d’avancer sereinement. »
-              </p>
-              <div className="testimonial-author">
-                <span>JM</span>
-                <div>
-                  <strong>Jean M.</strong>
-                  <small>Profil fictif · Entrepreneur</small>
-                </div>
-              </div>
-            </article>
-          </div>
-        </section>
-
         <section className="premium-contact section-pad" id="contact">
           <div className="contact-heading">
             <Eyebrow light>PARLONS DE VOTRE PROJET</Eyebrow>
@@ -416,8 +363,7 @@ export default function PremiumPage() {
             </p>
             <div className="contact-detail">
               <span>
-                <Clock size={17} /> Réponse sous 1 à 2 jours ouvrés{" "}
-                <small>(objectif indicatif de démonstration)</small>
+                <Clock size={17} /> Réponse sous 1 à 2 jours ouvrés
               </span>
               <span>
                 <Globe size={17} /> Abidjan, Côte d’Ivoire

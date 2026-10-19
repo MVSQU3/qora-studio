@@ -7,7 +7,7 @@ import {
   Sparkles,
 } from "lucide-react";
 import { Link } from "react-router";
-import { DemoLabel, Logo } from "./components/Shared";
+import { Logo } from "./components/Shared";
 
 const options = [
   {
@@ -82,7 +82,7 @@ export default function Showcase() {
             <em>Une première impression</em> maîtrisée.
           </h1>
           <p>
-            Quatre propositions complètes pour la même entreprise fictive.
+            Quatre propositions complètes pour une même entreprise.
             Comparez les univers, les rythmes et les parcours avant de choisir
             une direction.
           </p>
@@ -135,7 +135,6 @@ export default function Showcase() {
                   decoding="async"
                 />
                 <span className="chooser-number">{option.number}</span>
-                <DemoLabel />
               </div>
               <div className="chooser-card-body">
                 <span className="micro-label">{option.label}</span>
@@ -188,9 +187,6 @@ export default function Showcase() {
       </section>
       <footer className="showcase-footer">
         <Logo />
-        <span>
-          Prototype de présentation — Qora Studio est une identité fictive.
-        </span>
         <a href="#top">Retour en haut ↑</a>
       </footer>
     </main>
