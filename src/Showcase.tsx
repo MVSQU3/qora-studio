@@ -74,7 +74,7 @@ export default function Showcase() {
       <section className="showcase-hero">
         <div className="showcase-hero-copy">
           <div className="showcase-kicker">
-            <Sparkles size={15} /> CONCEPTION DE SITE VITRINE
+            <Sparkles size={15} /> CONCEPTION DE SITE ET APPLICATION WEB
           </div>
           <h1>
             Quatre directions.
@@ -91,7 +91,7 @@ export default function Showcase() {
               <CheckCircle2 size={16} /> Responsive
             </span>
             <span>
-              <CheckCircle2 size={16} /> React + Tailwind
+              <CheckCircle2 size={16} /> Technologie moderne
             </span>
             <span>
               <CheckCircle2 size={16} /> Prise de contact prête à configurer

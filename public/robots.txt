@@ -1,0 +1,4 @@
+User-agent: *
+Allow: /
+
+Sitemap: https://qora.informaland.com/sitemap.xml

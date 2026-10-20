@@ -84,12 +84,12 @@ const faqs = [
     a: "Cette maquette s’adresse aux PME, commerces, indépendants et organisations qui veulent mieux présenter leurs activités. Le ciblage précis sera ajusté selon l’offre réelle de l’entreprise.",
   },
   {
-    q: "Combien coûte un site vitrine ?",
+    q: "Combien coûte un site web ?",
     a: "Le budget dépend du nombre de pages, du contenu disponible et des fonctionnalités. Les montants affichés ici sont indicatifs : un devis précis sera établi après cadrage.",
   },
   {
     q: "Combien de temps faut-il pour lancer un site ?",
-    a: "Le délai varie selon la complexité et la rapidité de validation des contenus. Pour un petit site vitrine, on peut définir un calendrier réaliste après avoir clarifié le périmètre.",
+    a: "Le délai varie selon la complexité et la rapidité de validation des contenus. Pour un petit site web, on peut définir un calendrier réaliste après avoir clarifié le périmètre.",
   },
   {
     q: "Pourrai-je modifier le site ensuite ?",

@@ -16,7 +16,7 @@ const services = [
     title: "Sites web qui expliquent bien votre métier",
     tag: "WEB & CONTENU",
     detail:
-      "Un site vitrine lisible, rapide et adapté au téléphone. On hiérarchise votre offre pour que le visiteur comprenne quoi faire ensuite.",
+      "Un site web lisible, rapide et adapté au téléphone. On hiérarchise votre offre pour que le visiteur comprenne quoi faire ensuite.",
   },
   {
     n: "02",
