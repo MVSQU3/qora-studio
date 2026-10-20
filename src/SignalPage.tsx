@@ -56,14 +56,14 @@ const concepts = [
     id: "01",
     label: "SAAS",
     name: "Naya Analytics",
-    img: "https://images.unsplash.com/photo-1551288049-bebda4e38f71?auto=format&fit=crop&w=1200&q=84",
+    img: "https://images.unsplash.com/photo-1735744583287-07e58313f8cf?auto=format&fit=crop&w=1000&q=80",
     note: "Concept : tableau de bord et suivi des indicateurs clés.",
   },
   {
     id: "02",
     label: "PLATEFORME WEB",
     name: "Kalo Platform",
-    img: "https://images.unsplash.com/photo-1555066931-4365d14bab8c?auto=format&fit=crop&w=1200&q=84",
+    img: "https://images.unsplash.com/photo-1680992046615-065f58bcb4d8?auto=format&fit=crop&w=1000&q=80",
     note: "Concept : application web sur mesure et espace client.",
   },
 ];

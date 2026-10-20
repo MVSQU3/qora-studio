@@ -59,7 +59,7 @@ const options = [
     className: "chooser-signal",
     tags: ["Noir & lime", "Modulaire", "Tech"],
     image:
-      "https://images.unsplash.com/photo-1551288049-bebda4e38f71?auto=format&fit=crop&w=1000&q=80",
+      "https://images.unsplash.com/photo-1735744583287-07e58313f8cf?auto=format&fit=crop&w=1000&q=80",
     alt: "Tableau de bord analytics sur fond sombre",
   },
 ];
