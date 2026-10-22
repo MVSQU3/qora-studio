@@ -14,7 +14,7 @@ export function Logo({ light, playful }: { light?: boolean; playful?: boolean })
       <span className="brand-mark"><span>Q</span></span>
       <span className="brand-copy">
         <strong>QORA</strong>
-        <small>STUDIO DIGITAL by IMFORMAland</small>
+        <small>STUDIO DIGITAL <span>by IMFORMAland</span></small>
       </span>
     </Link>
   );
