@@ -5,6 +5,7 @@ import StudioPage from './StudioPage'
 import AtelierPage from './AtelierPage'
 import SignalPage from './SignalPage'
 import Seo from './components/Seo'
+import ConceptPage from './ConceptPage'
 
 export default function App() {
   return (
@@ -74,6 +75,7 @@ export default function App() {
           </>
         }
       />
+      <Route path="/:slug" element={<ConceptPage />} />
     </Routes>
   )
 }

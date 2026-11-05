@@ -8,8 +8,9 @@ import {
 } from "lucide-react";
 import { Link } from "react-router";
 import { Logo } from "./components/Shared";
+import { concepts, type Concept } from "./concepts";
 
-const options = [
+const baseOptions = [
   {
     number: "01",
     label: "CORPORATE PREMIUM",
@@ -64,6 +65,24 @@ const options = [
   },
 ];
 
+type Option = (typeof baseOptions)[number] & { palette?: Concept["palette"] };
+
+const options: Option[] = [
+  ...baseOptions,
+  ...concepts.map((c) => ({
+    number: c.number,
+    label: c.label,
+    title: c.tagline,
+    description: c.description,
+    path: `/${c.slug}`,
+    className: "chooser-concept",
+    tags: c.tags,
+    image: "",
+    alt: "",
+    palette: c.palette,
+  })),
+];
+
 export default function Showcase() {
   return (
     <main className="showcase-page" id="top">
@@ -114,11 +133,11 @@ export default function Showcase() {
           <div>
             <span className="micro-label">CHOISISSEZ VOTRE UNIVERS</span>
             <h2 id="compare-title">
-              Quatre façons de raconter la même expertise.
+              Quatorze façons de raconter la même expertise.
             </h2>
           </div>
           <span className="chooser-count">
-            04 <span>MAQUETTES</span>
+            14 <span>MAQUETTES</span>
           </span>
         </div>
         <div className="chooser-grid grid grid-cols-1 md:grid-cols-2 gap-6">
@@ -128,12 +147,24 @@ export default function Showcase() {
               key={option.number}
             >
               <div className="chooser-image-wrap">
-                <img
-                  src={option.image}
-                  alt={option.alt}
-                  loading="lazy"
-                  decoding="async"
-                />
+                {option.image ? (
+                  <img
+                    src={option.image}
+                    alt={option.alt}
+                    loading="lazy"
+                    decoding="async"
+                  />
+                ) : (
+                  option.palette && (
+                    <div
+                      className="chooser-swatch"
+                      aria-hidden="true"
+                      style={{
+                        background: `linear-gradient(135deg, ${option.palette.bg} 0 45%, ${option.palette.accent} 45% 75%, ${option.palette.accent2} 75%)`,
+                      }}
+                    />
+                  )
+                )}
                 <span className="chooser-number">{option.number}</span>
               </div>
               <div className="chooser-card-body">
