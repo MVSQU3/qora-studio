@@ -1,5 +1,7 @@
 import { useState } from "react";
+import { Link } from "react-router";
 import {
+  LayoutGrid,
   ArrowDownRight,
   ArrowRight,
   ArrowUpRight,
@@ -126,6 +128,9 @@ export default function StudioPage() {
               <a className="button button-coral" href="#contact">
                 Parlons de votre projet <ArrowUpRight size={17} />
               </a>
+              <Link className="button studio-showcase-btn" to="/directions">
+                Explorer les 14 sites <LayoutGrid size={17} />
+              </Link>
               <a className="studio-discover-link" href="#services">
                 Découvrir ce qu’on fait <ArrowDownRight size={17} />
               </a>
