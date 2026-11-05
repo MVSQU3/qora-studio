@@ -1,0 +1,41 @@
+.sc { --bg: #12081f; --m: #ff2e93; --c: #7cf0ff; --card: #1f1033; font-family: 'Space Grotesk', system-ui, sans-serif; background: var(--bg); color: #f6f0ff; overflow-x: clip; }
+.sc h1, .sc h2, .sc h3, .sc-days small + * { font-family: 'Anton', Impact, sans-serif; font-weight: 400; margin: 0; text-transform: uppercase; }
+.sc a:focus-visible, .sc button:focus-visible { outline: 3px solid var(--c); outline-offset: 3px; }
+.sc-sr { position: absolute; width: 1px; height: 1px; overflow: hidden; clip: rect(0 0 0 0); }
+.sc-marq { background: var(--m); color: #12081f; overflow: hidden; white-space: nowrap; font: 400 1.1rem 'Anton'; letter-spacing: .08em; padding: 10px 0; }
+.sc-marq div { display: inline-block; animation: sc-m 40s linear infinite; }
+@keyframes sc-m { to { transform: translateX(-50%); } }
+
+.sc-hero { position: relative; padding: clamp(24px, 5vw, 70px) clamp(16px, 5vw, 64px) clamp(40px, 7vw, 90px); display: grid; gap: 28px; }
+.sc-hero h1 { font-size: clamp(4.2rem, 16.5vw, 14rem); line-height: .92; letter-spacing: -.01em; }
+.sc-hero h1 span { display: block; } .sc-hero h1 span:nth-child(2) { color: transparent; -webkit-text-stroke: 3px var(--c); margin-left: .5em; } .sc-hero h1 span:nth-child(3) { color: var(--m); }
+.sc-side { display: flex; flex-wrap: wrap; align-items: center; gap: 18px 30px; } .sc-side p { margin: 0; font-size: 1.2rem; max-width: 22ch; }
+.sc-btn { display: inline-block; background: var(--c); color: #12081f; font: 400 1.25rem 'Anton'; letter-spacing: .08em; text-transform: uppercase; padding: 14px 30px; text-decoration: none; transform: skew(-8deg); }
+.sc-btn:hover { background: #fff; }
+.sc-sticker { position: absolute; right: clamp(10px, 6vw, 100px); top: 30px; width: 120px; height: 120px; border-radius: 50%; background: var(--c); color: #12081f; display: grid; place-content: center; text-align: center; font: 400 3.6rem/.8 'Anton'; transform: rotate(14deg); }
+.sc-sticker small { font: 700 .85rem 'Space Grotesk'; text-transform: uppercase; letter-spacing: .12em; }
+@media (max-width: 640px) { .sc-sticker { width: 84px; height: 84px; font-size: 2.4rem; top: 14px; } }
+
+.sc-lineup { padding: clamp(24px, 5vw, 60px) clamp(16px, 5vw, 64px); background: var(--card); border-block: 3px solid var(--m); }
+.sc-days { display: flex; flex-wrap: wrap; gap: 10px; margin-bottom: 20px; }
+.sc-days button { display: grid; text-align: left; font: 400 1.9rem/1 'Anton'; text-transform: uppercase; padding: 12px 20px; background: transparent; color: #f6f0ff; border: 2px solid rgba(255, 255, 255, .3); cursor: pointer; }
+.sc-days small { font: 700 .7rem 'Space Grotesk'; letter-spacing: .14em; color: var(--c); margin-top: 6px; }
+.sc-days .on { background: var(--m); border-color: var(--m); color: #12081f; } .sc-days .on small { color: #12081f; }
+.sc-lineup ol { list-style: none; margin: 0; padding: 0; animation: sc-in .3s ease; } @keyframes sc-in { from { opacity: 0; transform: translateX(-12px); } }
+.sc-lineup li { display: flex; align-items: baseline; gap: 18px; padding: 8px 0; border-bottom: 1px solid rgba(255, 255, 255, .15); }
+.sc-lineup time { font: 700 1rem 'Space Grotesk'; color: var(--c); min-width: 64px; }
+.sc-lineup b { font: 400 clamp(2.2rem, 8vw, 5.6rem)/1.02 'Anton'; text-transform: uppercase; }
+.sc-fine { margin: 14px 0 0; font-size: .8rem; opacity: .6; }
+
+.sc-tix { padding: clamp(40px, 7vw, 90px) clamp(16px, 5vw, 64px); }
+.sc-tix h2 { font-size: clamp(3rem, 9vw, 7rem); line-height: .9; color: var(--c); margin-bottom: 30px; }
+.sc-tickets { display: grid; gap: 22px; grid-template-columns: repeat(auto-fit, minmax(270px, 1fr)); }
+.sc-ticket { display: flex; justify-content: space-between; align-items: center; gap: 12px; background: var(--m); color: #12081f; padding: 22px 22px 22px 28px; -webkit-mask: radial-gradient(circle 12px at 0 50%, #0000 98%, #000) left / 51% 100% no-repeat, radial-gradient(circle 12px at 100% 50%, #0000 98%, #000) right / 51% 100% no-repeat; mask: radial-gradient(circle 12px at 0 50%, #0000 98%, #000) left / 51% 100% no-repeat, radial-gradient(circle 12px at 100% 50%, #0000 98%, #000) right / 51% 100% no-repeat; border-right: 0; }
+.sc-ticket h3 { font-size: 2rem; } .sc-ticket p { margin: 2px 0 8px; font-weight: 700; font-size: .85rem; } .sc-ticket strong { font: 400 1.6rem 'Anton'; }
+.sc-qty { display: grid; justify-items: center; gap: 4px; border-left: 3px dashed #12081f; padding-left: 16px; }
+.sc-qty button { width: 40px; height: 40px; border-radius: 50%; border: 2px solid #12081f; background: transparent; font: 700 1.3rem 'Space Grotesk'; cursor: pointer; color: #12081f; } .sc-qty button:disabled { opacity: .35; }
+.sc-qty output { font: 400 1.8rem 'Anton'; }
+.sc-total { display: flex; flex-wrap: wrap; align-items: center; gap: 14px 26px; margin-top: 36px; padding-top: 22px; border-top: 3px solid var(--c); }
+.sc-total span { text-transform: uppercase; letter-spacing: .14em; font-size: .8rem; } .sc-total b { font: 400 3rem 'Anton'; }
+.sc-foot { padding: 20px clamp(16px, 5vw, 64px) 70px; font-size: .8rem; opacity: .55; }
+@media (prefers-reduced-motion: reduce) { .sc-marq div, .sc-lineup ol { animation: none; } }

@@ -1,0 +1,59 @@
+.mk { --y: #ffd23f; --r: #e63b2e; --i: #1b1f6b; --c: #fff7df; font-family: 'Rubik', system-ui, sans-serif; background: var(--y); color: var(--i); min-height: 100vh; padding-bottom: 110px; overflow-x: clip; }
+.mk h1, .mk h2 { font-family: 'Bowlby One', 'Rubik', sans-serif; font-weight: 400; margin: 0; line-height: .95; }
+.mk-wax { height: 54px; background:
+  radial-gradient(circle at 50% 50%, var(--r) 0 9px, transparent 10px) 0 0/54px 54px,
+  radial-gradient(circle at 0 0, var(--i) 0 14px, transparent 15px) 0 0/54px 54px,
+  radial-gradient(circle at 100% 100%, var(--i) 0 14px, transparent 15px) 0 0/54px 54px,
+  repeating-conic-gradient(from 0deg at 50% 50%, #fff 0 12deg, transparent 12deg 24deg) 0 0/54px 54px, var(--y); border-bottom: 4px solid var(--i); }
+.mk-head { display: flex; justify-content: space-between; align-items: center; gap: 12px; padding: 16px clamp(16px, 5vw, 56px); }
+.mk-logo { font-family: 'Bowlby One', sans-serif; font-size: 1.5rem; text-decoration: none; color: var(--i); line-height: 1; }
+.mk-logo span { display: block; font: 500 .7rem 'Rubik'; letter-spacing: .12em; text-transform: uppercase; margin-top: 4px; }
+.mk-head nav { display: flex; gap: 20px; font-weight: 500; align-items: center; }
+.mk-head nav a { color: var(--i); text-decoration: none; }
+.mk-head nav a:not(.mk-panier-link) { display: none; }
+@media (min-width: 700px) { .mk-head nav a:not(.mk-panier-link) { display: inline; } }
+.mk-panier-link { background: var(--i); color: var(--y) !important; padding: 8px 14px; border-radius: 999px; }
+
+.mk-hero { position: relative; padding: clamp(32px, 7vw, 88px) clamp(16px, 5vw, 56px) clamp(56px, 9vw, 110px); }
+.mk-kicker { display: inline-block; background: var(--i); color: var(--y); padding: 6px 12px; font-weight: 700; transform: rotate(-1.5deg); margin: 0 0 22px; }
+.mk-hero h1 { font-size: clamp(3rem, 13vw, 10.5rem); text-transform: uppercase; letter-spacing: -.02em; }
+.mk-hero h1 span { display: block; }
+.mk-h1-b { color: var(--r); -webkit-text-stroke: 3px var(--i); paint-order: stroke fill; text-shadow: 6px 6px 0 var(--i); }
+.mk-lead { max-width: 46ch; font-size: 1.2rem; font-weight: 500; margin: 26px 0; }
+.mk-btn { display: inline-block; background: var(--r); color: #fff; font-weight: 700; padding: 15px 26px; border-radius: 10px; text-decoration: none; border: 3px solid var(--i); box-shadow: 5px 5px 0 var(--i); transition: transform .12s, box-shadow .12s; }
+.mk-btn:hover { transform: translate(2px, 2px); box-shadow: 3px 3px 0 var(--i); }
+.mk a:focus-visible, .mk button:focus-visible { outline: 4px solid var(--r); outline-offset: 3px; }
+.mk-sticker { position: absolute; right: clamp(12px, 6vw, 90px); top: clamp(40px, 8vw, 90px); width: 128px; height: 128px; border-radius: 50%; background: var(--r); color: #fff; display: grid; place-items: center; text-align: center; font: 700 1.1rem/1.1 'Rubik'; text-transform: uppercase; transform: rotate(12deg); border: 3px dashed var(--c); outline: 4px solid var(--r); }
+@media (max-width: 700px) { .mk-sticker { display: none; } }
+
+.mk-stall { background: var(--c); border-block: 4px solid var(--i); padding: clamp(36px, 6vw, 80px) clamp(16px, 5vw, 56px); }
+.mk-stall-head { display: flex; flex-wrap: wrap; align-items: baseline; justify-content: space-between; gap: 8px 24px; margin-bottom: 40px; }
+.mk-stall h2 { font-size: clamp(2rem, 5vw, 3.6rem); }
+.mk-stall-head p { margin: 0; font-weight: 500; }
+.mk-tags { display: grid; gap: 34px 24px; grid-template-columns: repeat(auto-fill, minmax(210px, 1fr)); }
+.mk-tag { position: relative; background: #fff; border: 3px solid var(--i); padding: 38px 20px 18px; clip-path: polygon(0 18%, 14% 0, 100% 0, 100% 100%, 0 100%); transform: rotate(var(--tilt)); box-shadow: 6px 6px 0 var(--r); transition: transform .2s; }
+.mk-tag:hover { transform: rotate(0deg) translateY(-4px); }
+.mk-hole { position: absolute; top: 10px; left: 22px; width: 14px; height: 14px; border-radius: 50%; border: 3px solid var(--i); background: var(--c); }
+.mk-tag h3 { margin: 0; font: 400 1.5rem 'Bowlby One'; line-height: 1; }
+.mk-unit { margin: 6px 0 0; font-size: .85rem; opacity: .75; }
+.mk-price { margin: 14px 0; font: 400 2.1rem 'Bowlby One'; color: var(--r); }
+.mk-qty { display: flex; align-items: center; justify-content: space-between; border: 3px solid var(--i); border-radius: 10px; overflow: hidden; }
+.mk-qty button { width: 46px; height: 42px; border: 0; background: var(--y); color: var(--i); font: 700 1.4rem 'Rubik'; cursor: pointer; }
+.mk-qty button:disabled { opacity: .35; cursor: not-allowed; }
+.mk-qty output { font-weight: 700; font-size: 1.15rem; }
+
+.mk-chalk { background: #23272b; color: #f2efe6; padding: clamp(36px, 6vw, 72px) clamp(16px, 5vw, 56px); border-bottom: 10px solid #8a5a2b; }
+.mk-chalk h2 { font: 400 clamp(1.8rem, 4vw, 3rem) 'Bowlby One'; color: var(--y); margin-bottom: 26px; }
+.mk-chalk ul { list-style: none; padding: 0; margin: 0 0 18px; max-width: 640px; }
+.mk-chalk li { display: flex; align-items: baseline; gap: 8px; padding: 9px 0; font-size: 1.15rem; }
+.mk-chalk li i { flex: 1; border-bottom: 2px dotted rgba(242, 239, 230, .5); transform: translateY(-4px); }
+.mk-chalk b { color: var(--y); }
+.mk-chalk p { margin: 0; opacity: .7; font-size: .9rem; }
+
+.mk-cart { position: fixed; left: 50%; bottom: 56px; transform: translateX(-50%); z-index: 50; width: min(94vw, 620px); display: flex; align-items: center; justify-content: space-between; gap: 14px; background: #fff; border: 3px solid var(--i); border-radius: 14px; padding: 12px 14px 12px 20px; box-shadow: 6px 6px 0 var(--i); }
+.mk-cart div { display: grid; line-height: 1.25; }
+.mk-cart strong { font-size: 1.05rem; }
+.mk-cart span { font-size: .9rem; color: var(--r); font-weight: 700; }
+.mk-btn-wa { background: #1fa855; padding: 12px 18px; box-shadow: 3px 3px 0 var(--i); white-space: nowrap; }
+@media (max-width: 480px) { .mk-cart { padding-left: 14px; } .mk-btn-wa { padding: 11px 12px; font-size: .9rem; } }
+@media (prefers-reduced-motion: reduce) { .mk-tag, .mk-btn { transition: none; } }

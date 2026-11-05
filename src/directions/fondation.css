@@ -1,0 +1,42 @@
+.fd { --n: #0f2a47; --o: #ff7a1a; --p: #eef3f8; font-family: 'Figtree', system-ui, sans-serif; background: #fff; color: var(--n); }
+.fd h1, .fd h2, .fd h3, .fd-logo { font-family: 'Newsreader', Georgia, serif; font-weight: 400; margin: 0; }
+.fd a:focus-visible, .fd button:focus-visible { outline: 3px solid var(--o); outline-offset: 3px; }
+.fd-sr { position: absolute; width: 1px; height: 1px; overflow: hidden; clip: rect(0 0 0 0); }
+.fd-head { display: flex; justify-content: space-between; align-items: center; padding: 20px clamp(18px, 6vw, 80px); border-bottom: 1px solid #d6e0ea; }
+.fd-logo { font-size: 1.5rem; font-weight: 600; color: var(--n); text-decoration: none; display: grid; line-height: 1; } .fd-logo span { font: 700 .6rem 'Figtree'; letter-spacing: .24em; text-transform: uppercase; color: var(--o); margin-top: 4px; }
+.fd-head nav { display: flex; gap: 22px; align-items: center; } .fd-head nav a { color: var(--n); text-decoration: none; font-weight: 700; font-size: .9rem; }
+.fd-head nav a:not(.fd-don) { display: none; } @media (min-width: 680px) { .fd-head nav a:not(.fd-don) { display: inline; } }
+.fd-don { background: var(--o); color: #1e0f00 !important; padding: 10px 18px; border-radius: 99px; }
+
+.fd-hero { padding: clamp(40px, 8vw, 110px) clamp(18px, 6vw, 80px) clamp(40px, 6vw, 80px); }
+.fd-kicker { font-weight: 700; letter-spacing: .2em; text-transform: uppercase; font-size: .75rem; color: var(--o); margin: 0 0 18px; }
+.fd-hero h1 { font-size: clamp(3rem, 10vw, 8.2rem); line-height: .92; letter-spacing: -.035em; font-weight: 400; }
+.fd-hero em { font-style: italic; text-decoration: underline; text-decoration-color: var(--o); text-decoration-thickness: .06em; text-underline-offset: .12em; }
+.fd-cols { display: grid; gap: 28px; margin-top: 44px; }
+@media (min-width: 860px) { .fd-cols { grid-template-columns: 1.4fr .8fr; align-items: end; } }
+.fd-drop { font: 400 clamp(1.15rem, 2vw, 1.5rem)/1.55 'Newsreader'; margin: 0; max-width: 56ch; }
+.fd-drop::first-letter { float: left; font: 600 4.6rem/.8 'Newsreader'; padding: 6px 12px 0 0; color: var(--o); }
+.fd-aside { margin: 0; padding-left: 16px; border-left: 3px solid var(--o); font-size: .88rem; line-height: 1.5; color: #4b6482; }
+
+.fd-prog { background: var(--n); color: #fff; }
+.fd-prog article { display: grid; grid-template-columns: minmax(80px, 22vw) 1fr; align-items: center; gap: 12px; padding: clamp(20px, 3vw, 40px) clamp(18px, 6vw, 80px); border-bottom: 1px solid rgba(255, 255, 255, .15); }
+.fd-prog b { font: 400 clamp(5rem, 18vw, 14rem)/.8 'Newsreader'; color: var(--o); }
+.fd-prog h3 { font-size: clamp(1.6rem, 3.5vw, 2.6rem); } .fd-prog p { max-width: 50ch; line-height: 1.6; opacity: .85; margin: 8px 0; } .fd-prog small { font-weight: 700; letter-spacing: .12em; text-transform: uppercase; font-size: .7rem; color: #9fc2e6; }
+
+.fd-journal { padding: clamp(48px, 8vw, 110px) clamp(18px, 6vw, 80px); background: var(--p); }
+.fd-journal h2 { font-size: clamp(2rem, 5vw, 3.6rem); font-style: italic; margin-bottom: 36px; }
+.fd-journal ol { list-style: none; margin: 0; padding: 0; max-width: 760px; }
+.fd-journal li { display: grid; gap: 4px; padding: 22px 0; border-top: 1px solid #b8c9db; }
+@media (min-width: 640px) { .fd-journal li { grid-template-columns: 140px 1fr; gap: 24px; } }
+.fd-journal time { font: 700 .8rem 'Figtree'; letter-spacing: .16em; text-transform: uppercase; color: var(--o); padding-top: 6px; }
+.fd-journal p { margin: 0; font: 400 1.3rem/1.55 'Newsreader'; }
+
+.fd-give { padding: clamp(48px, 8vw, 110px) clamp(18px, 6vw, 80px); display: grid; gap: 22px; justify-items: start; }
+.fd-give h2 { font-size: clamp(2.4rem, 6vw, 4.6rem); line-height: 1; }
+.fd-freq, .fd-amounts { display: flex; flex-wrap: wrap; gap: 10px; }
+.fd-give button { font: 700 1.05rem 'Figtree'; padding: 14px 22px; border: 2px solid var(--n); background: #fff; color: var(--n); border-radius: 99px; cursor: pointer; text-transform: capitalize; }
+.fd-give button.on { background: var(--n); color: #fff; }
+.fd-sum { font: 400 1.5rem 'Newsreader'; margin: 4px 0; } .fd-sum strong { color: var(--o); font-weight: 600; }
+.fd-go { background: var(--o); color: #1e0f00; padding: 17px 30px; border-radius: 99px; font-weight: 700; text-decoration: none; }
+.fd-give small { color: #4b6482; max-width: 50ch; }
+.fd-foot { padding: 20px clamp(18px, 6vw, 80px) 70px; font-size: .8rem; color: #4b6482; }

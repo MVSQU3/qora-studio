@@ -1,11 +1,35 @@
-import { Navigate, Route, Routes } from 'react-router'
+import { Navigate, Route, Routes, useParams } from 'react-router'
 import Showcase from './Showcase'
 import PremiumPage from './PremiumPage'
 import StudioPage from './StudioPage'
 import AtelierPage from './AtelierPage'
 import SignalPage from './SignalPage'
 import Seo from './components/Seo'
-import ConceptPage from './ConceptPage'
+import { Suspense, lazy } from 'react'
+
+const pages = {
+  marche: lazy(() => import('./directions/Marche')),
+  savane: lazy(() => import('./directions/Savane')),
+  clinique: lazy(() => import('./directions/Clinique')),
+  campus: lazy(() => import('./directions/Campus')),
+  table: lazy(() => import('./directions/Table')),
+  fondation: lazy(() => import('./directions/Fondation')),
+  manufacture: lazy(() => import('./directions/Manufacture')),
+  cabinet: lazy(() => import('./directions/Cabinet')),
+  scene: lazy(() => import('./directions/Scene')),
+  terroir: lazy(() => import('./directions/Terroir')),
+} as const
+
+function Direction() {
+  const { slug } = useParams()
+  const Page = slug && slug in pages ? pages[slug as keyof typeof pages] : null
+  if (!Page) return <Navigate to="/directions" replace />
+  return (
+    <Suspense fallback={null}>
+      <Page />
+    </Suspense>
+  )
+}
 
 export default function App() {
   return (
@@ -75,7 +99,7 @@ export default function App() {
           </>
         }
       />
-      <Route path="/:slug" element={<ConceptPage />} />
+      <Route path="/:slug" element={<Direction />} />
     </Routes>
   )
 }

@@ -1,0 +1,15 @@
+/* Vignettes de la page /directions pour les nouvelles directions */
+.chooser-swatch { width: 100%; height: 100%; min-height: 220px; }
+
+/* Accès au showcase depuis l'accueil */
+.studio-showcase-btn { background: transparent; color: inherit; border: 2px solid currentColor; }
+.studio-showcase-btn:hover { background: rgba(255, 255, 255, .5); }
+.nav-showcase { font-weight: 800; padding: 6px 14px; border: 2px solid currentColor; border-radius: 999px; }
+
+/* Bandeau commun des directions (démo) */
+.dir-back { position: fixed; z-index: 100; right: 12px; bottom: 12px; display: inline-flex; align-items: center; gap: 8px; padding: 9px 14px; border-radius: 999px; background: #111; color: #fff; font: 600 12px/1 system-ui, sans-serif; text-decoration: none; box-shadow: 0 6px 20px rgba(0,0,0,.3); }
+.dir-back:hover { background: #000; }
+.dir-back:focus-visible { outline: 3px solid #fff; outline-offset: 2px; }
+
+/* Neutralise la règle globale « h1 em / h2 em » (Playfair) dans les directions */
+:is(.mk, .sv, .cl, .cp, .tb, .fd, .mf, .cb, .sc, .tr) :is(h1, h2) em { font-family: inherit; font-weight: inherit; }

@@ -1,0 +1,48 @@
+.sv { --p: 0; --ink: #1a1220; --night: #1b1226; --ember: #e06a2c; --gold: #f2a65a; --sand: #f3e4cc; font-family: 'Manrope', system-ui, sans-serif; background: var(--night); color: var(--sand); }
+.sv h1, .sv h2, .sv h3 { font-family: 'Instrument Serif', Georgia, serif; font-weight: 400; margin: 0; letter-spacing: -.01em; }
+.sv em { font-style: italic; color: var(--gold); }
+.sv a:focus-visible, .sv button:focus-visible, .sv input:focus-visible { outline: 3px solid var(--gold); outline-offset: 3px; }
+
+.sv-hero { position: relative; height: 100svh; min-height: 620px; overflow: hidden; }
+.sv-sky { position: absolute; inset: 0; background: linear-gradient(180deg, #24123a 0%, #6b2c4c 35%, #d8602b 68%, #f6b265 100%); filter: hue-rotate(calc(var(--p) * -25deg)) brightness(calc(1 - var(--p) * .55)); }
+.sv-sun { position: absolute; left: 62%; bottom: 32%; width: clamp(110px, 18vw, 240px); aspect-ratio: 1; border-radius: 50%; background: radial-gradient(circle at 40% 35%, #fff2c2, #ffc15e 55%, #ff8a3c); box-shadow: 0 0 120px 40px rgba(255, 160, 70, .45); transform: translateY(calc(var(--p) * 70vh)); }
+.sv-land { position: absolute; inset: auto 0 0 0; width: 100%; height: 62%; }
+.sv-h1 { fill: #4a1f3c; } .sv-h2 { fill: #2d1536; } .sv-h3 { fill: #170e1d; }
+.sv-tree path { stroke: #170e1d; stroke-width: 7; fill: none; stroke-linecap: round; } .sv-tree ellipse { fill: #170e1d; }
+.sv-nav { position: absolute; top: 0; left: 0; right: 0; display: flex; justify-content: space-between; align-items: center; padding: 22px clamp(16px, 5vw, 64px); z-index: 3; }
+.sv-mark { font: 400 1.9rem 'Instrument Serif'; color: var(--sand); text-decoration: none; } .sv-mark i { color: var(--gold); }
+.sv-nav span a { margin-left: 26px; color: var(--sand); text-decoration: none; font-weight: 600; font-size: .92rem; }
+.sv-title { position: absolute; left: clamp(16px, 5vw, 64px); bottom: clamp(36px, 9vh, 96px); z-index: 3; max-width: 90vw; }
+.sv-title p { margin: 0 0 14px; font-weight: 600; letter-spacing: .18em; text-transform: uppercase; font-size: .75rem; color: var(--gold); }
+.sv-title h1 { font-size: clamp(3.2rem, 11vw, 9rem); line-height: .9; text-shadow: 0 4px 40px rgba(20, 8, 30, .5); }
+.sv-cta { display: inline-block; margin-top: 26px; padding: 14px 26px; border: 1.5px solid var(--sand); border-radius: 999px; color: var(--sand); text-decoration: none; font-weight: 600; backdrop-filter: blur(6px); background: rgba(20, 8, 30, .25); transition: background .2s, color .2s; }
+.sv-cta:hover { background: var(--sand); color: var(--ink); }
+
+.sv-stays { padding: clamp(56px, 9vw, 120px) 0 clamp(40px, 6vw, 80px); background: linear-gradient(#170e1d, #1b1226); }
+.sv-stays h2 { font-size: clamp(2.2rem, 6vw, 4.6rem); padding: 0 clamp(16px, 5vw, 64px); max-width: 16ch; line-height: 1; }
+.sv-rail { list-style: none; margin: 44px 0 0; padding: 0 clamp(16px, 5vw, 64px) 20px; display: flex; gap: 22px; overflow-x: auto; scroll-snap-type: x mandatory; scrollbar-width: thin; }
+.sv-card { flex: 0 0 min(78vw, 310px); scroll-snap-align: start; }
+.sv-arch { height: 330px; border-radius: 160px 160px 14px 14px; position: relative; overflow: hidden; margin-bottom: 18px; }
+.sv-arch span { position: absolute; inset: 0; background: radial-gradient(circle at 50% 78%, rgba(255, 214, 140, .9) 0 14%, transparent 15%), linear-gradient(var(--g1), var(--g2)); }
+.sv-a { --g1: #3b1f4d; --g2: #e0662a; } .sv-b { --g1: #14243a; --g2: #e9a15a; } .sv-c { --g1: #2b1a14; --g2: #d4492f; } .sv-d { --g1: #0f3340; --g2: #7bc4b0; }
+.sv-card h3 { font-size: 1.9rem; line-height: 1.05; }
+.sv-card p { margin: 8px 0 12px; opacity: .8; line-height: 1.55; }
+.sv-card button { background: none; border: 0; padding: 0; color: var(--gold); font: 600 .95rem 'Manrope'; cursor: pointer; }
+
+.sv-trip { padding: clamp(40px, 6vw, 90px) clamp(16px, 5vw, 64px) clamp(70px, 10vw, 130px); background: var(--night); }
+.sv-ticket { display: grid; max-width: 920px; margin: auto; background: var(--sand); color: var(--ink); border-radius: 18px; overflow: hidden; --notch: 14px; }
+@media (min-width: 760px) { .sv-ticket { grid-template-columns: 1.6fr 1fr; } .sv-ticket-stub { border-left: 2px dashed rgba(26, 18, 32, .35); } }
+.sv-ticket-main { padding: clamp(24px, 4vw, 44px); display: grid; gap: 18px; }
+.sv-stamp { margin: 0; font-weight: 700; letter-spacing: .16em; text-transform: uppercase; font-size: .72rem; color: #a2431c; }
+.sv-ticket h2 { font-size: clamp(2rem, 5vw, 3.2rem); line-height: 1; }
+.sv-ticket label { display: grid; gap: 6px; font-weight: 600; font-size: .82rem; text-transform: uppercase; letter-spacing: .08em; }
+.sv-ticket input[type='date'] { font: 600 1rem 'Manrope'; padding: 12px; border: 0; border-bottom: 2px solid var(--ink); background: transparent; color: var(--ink); }
+.sv-row { display: flex; gap: 28px; flex-wrap: wrap; }
+.sv-step { display: inline-flex; align-items: center; gap: 14px; }
+.sv-step button { width: 38px; height: 38px; border-radius: 50%; border: 2px solid var(--ink); background: transparent; font-size: 1.2rem; cursor: pointer; color: var(--ink); }
+.sv-step output { font: 400 2rem 'Instrument Serif'; min-width: 1.5ch; text-align: center; text-transform: none; letter-spacing: 0; }
+.sv-ticket-stub { padding: clamp(24px, 4vw, 40px); background: #e9d3b0; display: grid; align-content: space-between; gap: 22px; }
+.sv-ticket-stub p { margin: 0; line-height: 1.55; font-size: .95rem; }
+.sv-ticket-stub a { background: var(--ink); color: var(--sand); text-align: center; padding: 15px; border-radius: 999px; font-weight: 600; text-decoration: none; }
+.sv-foot { padding: 20px; text-align: center; font-size: .8rem; opacity: .55; padding-bottom: 70px; }
+@media (prefers-reduced-motion: reduce) { .sv-sun { transform: none; } .sv-cta { transition: none; } }

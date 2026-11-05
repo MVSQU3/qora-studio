@@ -1,0 +1,39 @@
+.mf { --y: #ffc400; --g: #15171a; --g2: #1f2328; --line: #8fb2e6; font-family: 'JetBrains Mono', ui-monospace, monospace; background: var(--g); color: #e9ecef; }
+.mf h1, .mf h2, .mf-logo { font-family: 'Barlow Condensed', Impact, sans-serif; text-transform: uppercase; margin: 0; font-weight: 800; letter-spacing: .01em; }
+.mf a:focus-visible, .mf button:focus-visible, .mf input:focus-visible { outline: 3px solid var(--y); outline-offset: 3px; }
+.mf-hazard { height: 18px; background: repeating-linear-gradient(-45deg, var(--y) 0 18px, var(--g) 18px 36px); }
+.mf-head { display: flex; justify-content: space-between; align-items: center; padding: 18px clamp(16px, 5vw, 64px); border-bottom: 1px solid #343a40; }
+.mf-logo { font-size: 1.8rem; color: #fff; text-decoration: none; } .mf-logo i { color: var(--y); font-style: normal; margin: 0 4px; }
+.mf-head nav a { margin-left: 24px; color: #cfd4da; text-decoration: none; font-size: .82rem; text-transform: uppercase; letter-spacing: .1em; }
+
+.mf-hero { display: grid; gap: 30px; padding: clamp(30px, 6vw, 80px) clamp(16px, 5vw, 64px); align-items: center; }
+@media (min-width: 980px) { .mf-hero { grid-template-columns: 1fr 1fr; } }
+.mf-mono { margin: 0 0 14px; font-size: .74rem; letter-spacing: .12em; color: var(--line); }
+.mf-hero h1 { font-size: clamp(4rem, 14vw, 10rem); line-height: .86; } .mf-hero em { font-style: normal; color: var(--y); }
+.mf-lead { max-width: 48ch; line-height: 1.7; color: #b7bec6; margin: 26px 0; font-size: .95rem; }
+.mf-btn { display: inline-block; background: var(--y); color: #111; font: 800 1.2rem 'Barlow Condensed'; text-transform: uppercase; letter-spacing: .08em; padding: 14px 30px; text-decoration: none; clip-path: polygon(0 0, 100% 0, 100% calc(100% - 12px), calc(100% - 12px) 100%, 0 100%); border: 0; cursor: pointer; }
+.mf-btn:hover { background: #fff; }
+.mf-draw { width: 100%; height: auto; background: #0d2342; border: 2px solid var(--line); }
+.mf-grid line { stroke: rgba(143, 178, 230, .18); stroke-width: 1; }
+.mf-line { fill: none; stroke: #fff; stroke-width: 2.2; stroke-linejoin: round; }
+.mf-line path, .mf-line rect { stroke-dasharray: 1600; stroke-dashoffset: 1600; animation: mf-d 3.4s ease forwards; }
+@keyframes mf-d { to { stroke-dashoffset: 0; } }
+.mf-dim { fill: none; stroke: var(--y); stroke-width: 1.5; } .mf-dim text { fill: var(--y); stroke: none; font: 600 13px 'JetBrains Mono'; text-anchor: middle; }
+
+.mf-sheets, .mf-quote { padding: clamp(40px, 6vw, 90px) clamp(16px, 5vw, 64px); }
+.mf-sheets h2, .mf-quote h2 { font-size: clamp(2rem, 5vw, 3.4rem); margin-bottom: 26px; } .mf-sheets small { color: #7b848d; font-size: .45em; font-family: 'JetBrains Mono'; text-transform: none; }
+.mf-table { display: grid; border: 1px solid #3b424a; }
+.mf-table [role='row'] { display: grid; grid-template-columns: 80px 1.4fr 1.2fr .7fr 1fr; gap: 12px; padding: 16px; border-bottom: 1px solid #343a40; align-items: center; font-size: .88rem; }
+.mf-th { background: var(--g2); color: var(--y); text-transform: uppercase; font-size: .7rem !important; letter-spacing: .12em; }
+.mf-ref { color: var(--y); font-weight: 700; } .mf-table b { font: 800 1.35rem 'Barlow Condensed'; text-transform: uppercase; }
+@media (max-width: 760px) { .mf-table [role='row'] { grid-template-columns: 1fr 1fr; } .mf-th { display: none !important; } .mf-table b { grid-column: 1 / -1; } }
+
+.mf-quote { background: var(--g2); display: grid; gap: 22px; justify-items: start; border-top: 1px solid #343a40; }
+.mf-quote fieldset { border: 1px dashed #5a636d; padding: 18px; margin: 0; width: min(100%, 760px); } .mf-quote legend { padding: 0 8px; color: var(--line); font-size: .75rem; letter-spacing: .1em; text-transform: uppercase; }
+.mf-chips { display: flex; flex-wrap: wrap; gap: 10px; }
+.mf-chips button { font: 400 .85rem 'JetBrains Mono'; padding: 11px 16px; background: transparent; color: #e9ecef; border: 1.5px solid #5a636d; cursor: pointer; }
+.mf-chips .on { background: var(--y); color: #111; border-color: var(--y); font-weight: 700; }
+.mf-field { display: grid; gap: 8px; font-size: .75rem; letter-spacing: .1em; text-transform: uppercase; color: var(--line); }
+.mf-field input { font: 700 1.1rem 'JetBrains Mono'; padding: 13px 14px; background: var(--g); border: 1.5px solid #5a636d; color: #fff; width: 240px; }
+.mf-foot { padding: 20px clamp(16px, 5vw, 64px) 70px; font-size: .75rem; color: #7b848d; }
+@media (prefers-reduced-motion: reduce) { .mf-line path, .mf-line rect { animation: none; stroke-dashoffset: 0; } }

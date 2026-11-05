@@ -1,0 +1,25 @@
+.cb { --desk: #16221e; --paper: #f0f2ef; --ink: #14201c; --seal: #8c1d2c; font-family: 'Public Sans', system-ui, sans-serif; background: var(--desk) radial-gradient(circle at 50% 0, #223a32, transparent 70%); color: var(--ink); min-height: 100vh; }
+.cb a:focus-visible, .cb select:focus-visible { outline: 3px solid var(--seal); outline-offset: 3px; }
+.cb-head { display: flex; justify-content: space-between; flex-wrap: wrap; gap: 8px; padding: 22px clamp(16px, 5vw, 64px); color: #c9d6d0; font-size: .82rem; letter-spacing: .04em; }
+.cb-head a { font: 700 1.1rem 'Libre Caslon Text', serif; color: #fff; text-decoration: none; letter-spacing: 0; }
+.cb-sheet { max-width: 920px; margin: 10px auto 60px; background: var(--paper); padding: clamp(28px, 7vw, 84px); box-shadow: 0 30px 80px rgba(0, 0, 0, .55), 0 0 0 1px rgba(255, 255, 255, .06); position: relative; }
+.cb-sheet::before { content: ''; position: absolute; inset: 14px; border: 1px solid rgba(20, 32, 28, .2); pointer-events: none; }
+.cb-ref { margin: 0 0 30px; font-size: .72rem; letter-spacing: .2em; text-transform: uppercase; color: #5e6b66; }
+.cb h1 { font: 700 clamp(2rem, 5.5vw, 3.8rem)/1.08 'Libre Caslon Text', serif; margin: 0; letter-spacing: -.015em; } .cb h1 em { font-weight: 400; color: var(--seal); }
+.cb-pre { font: italic 1.2rem 'Libre Caslon Text', serif; margin: 22px 0 46px; color: #34443d; }
+.cb-art { display: grid; gap: 10px 36px; padding: 28px 0; border-top: 1px solid rgba(20, 32, 28, .25); }
+@media (min-width: 780px) { .cb-art { grid-template-columns: 170px 1fr; } }
+.cb-margin { font-size: .8rem; line-height: 1.5; color: #55645e; border-left: 2px solid var(--seal); padding-left: 12px; align-self: start; } .cb-margin span { display: block; font-weight: 600; text-transform: uppercase; letter-spacing: .14em; font-size: .66rem; color: var(--seal); margin-bottom: 4px; }
+.cb-art h2 { font: 700 1.5rem/1.25 'Libre Caslon Text', serif; margin: 0 0 10px; } .cb-art h2 span { color: var(--seal); }
+.cb-art p { margin: 0; line-height: 1.75; max-width: 56ch; }
+.cb-rdv label { display: grid; gap: 6px; margin: 16px 0; font-size: .78rem; font-weight: 600; text-transform: uppercase; letter-spacing: .1em; max-width: 360px; }
+.cb-rdv select { font: 400 1rem 'Public Sans'; padding: 12px; border: 0; border-bottom: 2px solid var(--ink); background: transparent; color: var(--ink); }
+.cb-btn { display: inline-block; background: var(--ink); color: var(--paper); padding: 14px 26px; text-decoration: none; font-weight: 600; letter-spacing: .04em; }
+.cb-btn:hover { background: var(--seal); }
+.cb-sign { position: relative; display: grid; gap: 8px; margin-top: 30px; padding-top: 26px; border-top: 1px solid rgba(20, 32, 28, .25); }
+.cb-sign svg { width: 230px; } .cb-sign path { fill: none; stroke: #1a2a6c; stroke-width: 2.4; stroke-linecap: round; stroke-dasharray: 700; stroke-dashoffset: 700; animation: cb-sig 2.6s ease .4s forwards; }
+@keyframes cb-sig { to { stroke-dashoffset: 0; } }
+.cb-sign span { font: italic .95rem 'Libre Caslon Text', serif; color: #55645e; }
+.cb-seal { position: absolute; right: 4px; bottom: -6px; width: 86px; height: 86px; display: grid; place-items: center; border-radius: 50%; background: radial-gradient(circle at 35% 30%, #b3293c, var(--seal) 60%, #5e101c); color: #f3c9ce; font: 700 2.2rem 'Libre Caslon Text'; font-style: normal; box-shadow: 0 4px 10px rgba(0, 0, 0, .3), inset 0 0 0 5px rgba(255, 255, 255, .12); transform: rotate(-8deg); }
+.cb-foot { text-align: center; color: #8ea39a; font-size: .78rem; padding: 0 0 70px; }
+@media (prefers-reduced-motion: reduce) { .cb-sign path { animation: none; stroke-dashoffset: 0; } }
