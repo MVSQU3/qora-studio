@@ -29,7 +29,7 @@ const options = [
     title: "Une marque qui se remarque.",
     description:
       "Un univers expressif, vivant et accessible, pensé pour convertir l’attention en prises de contact.",
-    path: "/studio",
+    path: "/",
     className: "chooser-studio",
     tags: ["Vert & corail", "Asymétrique", "Commercial"],
     image:

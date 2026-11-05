@@ -1,4 +1,4 @@
-import { Route, Routes } from 'react-router'
+import { Navigate, Route, Routes } from 'react-router'
 import Showcase from './Showcase'
 import PremiumPage from './PremiumPage'
 import StudioPage from './StudioPage'
@@ -9,18 +9,6 @@ import Seo from './components/Seo'
 export default function App() {
   return (
     <Routes>
-      <Route
-        path="/"
-        element={
-          <>
-            <Seo
-              title="Qora Studio — Création de sites web et applications web"
-              description="Qora Studio conçoit votre site web ou application web, votre identité visuelle et votre communication digitale. Découvrez 4 directions et demandez un devis."
-            />
-            <Showcase />
-          </>
-        }
-      />
       <Route
         path="/premium"
         element={
@@ -35,15 +23,28 @@ export default function App() {
         }
       />
       <Route
-        path="/studio"
+        path="/"
+        element={
+          <>
+            <Seo
+              title="Qora Studio — Création de sites web et applications web"
+              description="Qora Studio conçoit votre site web ou application web, votre identité visuelle et votre communication digitale. Demandez un devis."
+            />
+            <StudioPage />
+          </>
+        }
+      />
+      <Route path="/studio" element={<Navigate to="/" replace />} />
+      <Route
+        path="/directions"
         element={
           <>
             <Seo
               noindex
-              title="Maquette Moderne & Dynamique — Qora Studio"
-              description="Direction créative moderne et dynamique : un univers expressif en vert et corail, pensé pour convertir l’attention en contacts."
+              title="Directions créatives — Qora Studio — Création de sites web et applications web"
+              description="Qora Studio conçoit votre site web ou application web, votre identité visuelle et votre communication digitale. Découvrez 4 directions et demandez un devis."
             />
-            <StudioPage />
+            <Showcase />
           </>
         }
       />

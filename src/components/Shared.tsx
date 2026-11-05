@@ -77,7 +77,7 @@ export function Header({ theme }: { theme: Theme }) {
           <Logo light={!playful} playful={playful} />
           <nav className={`desktop-nav${open ? ' nav-open' : ''}`}>
             {navs[theme].map((n) => <a key={n.href} href={n.href} onClick={close}>{n.label}</a>)}
-            <Link to="/" onClick={close}>Changer de direction</Link>
+            <Link to="/directions" onClick={close}>Changer de direction</Link>
             <a className={`header-cta${playful ? ' header-cta-playful' : ''}`} href="#contact" onClick={close}>
               {playful ? 'Parlons-en' : 'DEMANDER UN DEVIS'} <ArrowRight size={14} />
             </a>
@@ -103,7 +103,7 @@ export function Footer({ theme }: { theme: Theme }) {
         <div>
           <h3>Navigation</h3>
           {navs[theme].map((n) => <a key={n.href} href={n.href}>{n.label}</a>)}
-          <Link to="/">Les deux directions</Link>
+          <Link to="/directions">Les autres directions</Link>
         </div>
         <div>
           <h3>Contact</h3>
