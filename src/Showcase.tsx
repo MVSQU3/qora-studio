@@ -8,7 +8,7 @@ import {
 } from "lucide-react";
 import { Link } from "react-router";
 import { Logo } from "./components/Shared";
-import { concepts, type Concept } from "./concepts";
+import { concepts } from "./concepts";
 
 const baseOptions = [
   {
@@ -20,8 +20,7 @@ const baseOptions = [
     path: "/premium",
     className: "chooser-premium",
     tags: ["Bleu nuit & or", "Éditorial", "B2B"],
-    image:
-      "https://images.unsplash.com/photo-1497366754035-f200968a6e72?auto=format&fit=crop&w=1000&q=80",
+    image: "/directions/premium.jpg",
     alt: "Espace de travail lumineux et contemporain",
   },
   {
@@ -33,8 +32,7 @@ const baseOptions = [
     path: "/",
     className: "chooser-studio",
     tags: ["Vert & corail", "Asymétrique", "Commercial"],
-    image:
-      "https://images.unsplash.com/photo-1521737711867-e3b97375f902?auto=format&fit=crop&w=1000&q=80",
+    image: "/directions/studio.jpg",
     alt: "Équipe créative en séance de travail",
   },
   {
@@ -46,8 +44,7 @@ const baseOptions = [
     path: "/atelier",
     className: "chooser-atelier",
     tags: ["Papier & terracotta", "Éditorial", "Local"],
-    image:
-      "https://images.unsplash.com/photo-1503387762-592deb58ef4e?auto=format&fit=crop&w=1000&q=80",
+    image: "/directions/atelier.jpg",
     alt: "Table de restaurant chaleureuse",
   },
   {
@@ -59,15 +56,12 @@ const baseOptions = [
     path: "/signal",
     className: "chooser-signal",
     tags: ["Noir & lime", "Modulaire", "Tech"],
-    image:
-      "https://images.unsplash.com/photo-1735744583287-07e58313f8cf?auto=format&fit=crop&w=1000&q=80",
+    image: "/directions/signal.jpg",
     alt: "Tableau de bord analytics sur fond sombre",
   },
 ];
 
-type Option = (typeof baseOptions)[number] & { palette?: Concept["palette"] };
-
-const options: Option[] = [
+const options = [
   ...baseOptions,
   ...concepts.map((c) => ({
     number: c.number,
@@ -77,9 +71,8 @@ const options: Option[] = [
     path: `/${c.slug}`,
     className: "chooser-concept",
     tags: c.tags,
-    image: "",
-    alt: "",
-    palette: c.palette,
+    image: `/directions/${c.slug}.jpg`,
+    alt: `Aperçu de la direction ${c.name}`,
   })),
 ];
 
@@ -147,24 +140,12 @@ export default function Showcase() {
               key={option.number}
             >
               <div className="chooser-image-wrap">
-                {option.image ? (
-                  <img
-                    src={option.image}
-                    alt={option.alt}
-                    loading="lazy"
-                    decoding="async"
-                  />
-                ) : (
-                  option.palette && (
-                    <div
-                      className="chooser-swatch"
-                      aria-hidden="true"
-                      style={{
-                        background: `linear-gradient(135deg, ${option.palette.bg} 0 45%, ${option.palette.accent} 45% 75%, ${option.palette.accent2} 75%)`,
-                      }}
-                    />
-                  )
-                )}
+                <img
+                  src={option.image}
+                  alt={option.alt}
+                  loading="lazy"
+                  decoding="async"
+                />
                 <span className="chooser-number">{option.number}</span>
               </div>
               <div className="chooser-card-body">

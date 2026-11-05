@@ -492,6 +492,7 @@ h1 em {
   background: linear-gradient(180deg, transparent 45%, rgba(6, 21, 31, 0.35));
 }
 .chooser-image-wrap img {
+  object-position: top;
   width: 100%;
   height: 100%;
   object-fit: cover;
